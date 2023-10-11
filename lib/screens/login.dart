@@ -80,7 +80,7 @@ class LoginPage extends StatelessWidget {
                         padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.red,
+                              backgroundColor: Colors.lightBlueAccent,
                               side: const BorderSide(
                                 width: 1,
                                 color: Colors.grey,

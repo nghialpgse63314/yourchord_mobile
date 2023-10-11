@@ -8,14 +8,16 @@ void main() {
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
+
   static const appTitle = 'Your chord';
+
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: appTitle,
       // home: MyHomePage(title: appTitle),
-        home: const MainPage(),
+      home: const MainPage(),
     );
   }
 }
@@ -26,21 +28,30 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 5,
       child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.red,
-            title: const Text('Your chord'),
+            // centerTitle: true,
+            // title: Text('YOUR CHORD'),
+            toolbarHeight: 35,
+            backgroundColor: Colors.blueGrey,
             bottom: TabBar(
+              isScrollable: true,
               tabs: [
                 Tab(
                   text: 'Trending',
                 ),
                 Tab(
-                  text: 'tab2',
+                  text: 'Genres',
                 ),
                 Tab(
-                  text: 'tab3',
+                  text: 'Instruments',
+                ),
+                Tab(
+                  text: 'Beat',
+                ),
+                Tab(
+                  text: 'tab5',
                 ),
               ],
             ),
@@ -53,12 +64,12 @@ class MainPage extends StatelessWidget {
                     delegate: CustomeSearchDelegate(),
                   );
                 },
-                icon: const Icon(Icons.search),),
+                icon: const Icon(Icons.search),
+              ),
             ],
           ),
           body: TabBarViewWidget(),
-          drawer: DrawerWidget()
-      ),
+          drawer: DrawerWidget()),
     );
   }
 }
@@ -71,61 +82,112 @@ class DrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+
+      backgroundColor: Colors.white,
       child: ListView(
+        // itemExtent: 30,
         padding: EdgeInsets.zero,
         children: [
-          SizedBox(
-            height: 100,
-            child: const DrawerHeader(
+          Container(
+            height: 115,
+            child: UserAccountsDrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.redAccent,
+                  color: Colors.blueGrey,
               ),
-              child: Text('Header'),
+              accountName: Container(
+                // alignment: Alignment.topRight,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                     "user Name",
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.onPrimary),
+                    ),
+                  ],
+                ),
+              ),
+              accountEmail: Container(
+                // alignment: Alignment.topRight,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                     "a@a.gmail.com",
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.onPrimary),
+                    ),
+                  ],
+                ),
+              ),
+
+
+
             ),
           ),
-          ListTile(
-            leading: Icon(Icons.home),
-            title: const Text('Home'),
-            onTap: () {
-              // Update the state of the app.
-              // ...
-            },
+          Card(
+            child: ListTile(
+              visualDensity: VisualDensity(vertical: -3),
+              leading: Icon(Icons.home),
+              title: const Text('Home'),
+              onTap: () {},
+            ),
           ),
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.music_note),
-            title: const Text('Chord'),
-            onTap: () {
-
-            },
+          Card(
+            child: ListTile(
+              visualDensity: VisualDensity(vertical: -3),
+              leading: Icon(Icons.music_note),
+              title: const Text('Chord'),
+              onTap: () {},
+            ),
           ),
-          Divider(),
-          ListTile(
-            title: const Text('Item 3'),
-            onTap: () {
-
-            },
+          Card(
+            child: ListTile(
+              visualDensity: VisualDensity(vertical: -3),
+              leading: Icon(Icons.collections),
+              title: const Text('Collections'),
+              onTap: () {},
+            ),
           ),
-          Divider(),
-          ListTile(
-            title: const Text('Item 4'),
-            onTap: () {
-
-            },
+          Card(
+            child: ListTile(
+              visualDensity: VisualDensity(vertical: -3),
+              leading: Icon(Icons.record_voice_over),
+              title: const Text('Record'),
+              onTap: () {},
+            ),
           ),
-          Divider(),
-          ListTile(
-            title: const Text('Item 5'),
-            onTap: () {
-
-            },
+          Card(
+            child: ListTile(
+              visualDensity: VisualDensity(vertical: -3),
+              leading: Icon(Icons.menu_book),
+              title: const Text('Courses'),
+              onTap: () {},
+            ),
           ),
-          Divider(),
-          ListTile(
-            title: const Text('Item 6'),
-            onTap: () {
-
-            },
+          Card(
+            child: ListTile(
+              visualDensity: VisualDensity(vertical: -3),
+              leading: Icon(Icons.person),
+              title: const Text('Profile'),
+              onTap: () {},
+            ),
+          ),
+          Card(
+            child: ListTile(
+              visualDensity: VisualDensity(vertical: -3),
+              leading: Icon(Icons.settings),
+              title: const Text('Settings'),
+              onTap: () {},
+            ),
+          ),
+          Card(
+            child: ListTile(
+              visualDensity: VisualDensity(vertical: -3),
+              leading: Icon(Icons.logout),
+              title: const Text('Logout'),
+              onTap: () {},
+            ),
           ),
         ],
       ),
@@ -149,7 +211,6 @@ class TabBarViewWidget extends StatelessWidget {
     );
   }
 }
-
 
 // class MyHomePage extends StatefulWidget {
 //   const MyHomePage({super.key, required this.title});
