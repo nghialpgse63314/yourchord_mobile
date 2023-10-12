@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:yourchord/screens/profile.dart';
 import 'package:yourchord/screens/search.dart';
+import 'package:yourchord/screens/settings.dart';
 import 'package:yourchord/screens/testtab2.dart';
 
 void main() {
@@ -170,7 +172,12 @@ class DrawerWidget extends StatelessWidget {
               visualDensity: VisualDensity(vertical: -3),
               leading: Icon(Icons.person),
               title: const Text('Profile'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>  EditProfilePage()));
+              },
             ),
           ),
           Card(
@@ -178,7 +185,10 @@ class DrawerWidget extends StatelessWidget {
               visualDensity: VisualDensity(vertical: -3),
               leading: Icon(Icons.settings),
               title: const Text('Settings'),
-              onTap: () {},
+              onTap: () {  Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>  SettingsPage()));},
             ),
           ),
           Card(

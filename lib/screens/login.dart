@@ -36,13 +36,6 @@ class LoginPage extends StatelessWidget {
                       ),
                       alignment: Alignment.center,
                       padding: const EdgeInsets.all(70),
-                      // child: const Text(
-                      //   'Your chord',
-                      //   style: TextStyle(
-                      //       color: Colors.blue,
-                      //       fontWeight: FontWeight.bold,
-                      //       fontSize: 30),
-                      // )
                     ),
                     Container(
                       alignment: Alignment.center,

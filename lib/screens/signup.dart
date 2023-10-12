@@ -18,7 +18,7 @@ class Signup extends StatelessWidget {
             Navigator.pop(context);
           },
           icon: Icon(
-            Icons.arrow_back_ios,
+            Icons.arrow_back,
             size: 20,
             color: Colors.black,
           ),
