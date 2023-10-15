@@ -3,6 +3,9 @@ import 'package:yourchord/screens/profile.dart';
 import 'package:yourchord/screens/search.dart';
 import 'package:yourchord/screens/settings.dart';
 import 'package:yourchord/screens/testtab2.dart';
+import 'package:yourchord/screens/trending.dart';
+
+import 'genres.dart';
 
 void main() {
   runApp(const HomePage());
@@ -84,7 +87,6 @@ class DrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-
       backgroundColor: Colors.white,
       child: ListView(
         // itemExtent: 30,
@@ -94,7 +96,7 @@ class DrawerWidget extends StatelessWidget {
             height: 115,
             child: UserAccountsDrawerHeader(
               decoration: BoxDecoration(
-                  color: Colors.blueGrey,
+                color: Colors.blueGrey,
               ),
               accountName: Container(
                 // alignment: Alignment.topRight,
@@ -102,7 +104,7 @@ class DrawerWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                     "user Name",
+                      "user Name",
                       style: TextStyle(
                           color: Theme.of(context).colorScheme.onPrimary),
                     ),
@@ -115,16 +117,13 @@ class DrawerWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                     "a@a.gmail.com",
+                      "a@a.gmail.com",
                       style: TextStyle(
                           color: Theme.of(context).colorScheme.onPrimary),
                     ),
                   ],
                 ),
               ),
-
-
-
             ),
           ),
           Card(
@@ -173,10 +172,8 @@ class DrawerWidget extends StatelessWidget {
               leading: Icon(Icons.person),
               title: const Text('Profile'),
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>  EditProfilePage()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => EditProfilePage()));
               },
             ),
           ),
@@ -185,10 +182,10 @@ class DrawerWidget extends StatelessWidget {
               visualDensity: VisualDensity(vertical: -3),
               leading: Icon(Icons.settings),
               title: const Text('Settings'),
-              onTap: () {  Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) =>  SettingsPage()));},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SettingsPage()));
+              },
             ),
           ),
           Card(
@@ -214,8 +211,8 @@ class TabBarViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TabBarView(
       children: [
-        Center(child: TestTab2()),
-        Center(child: Text('Page2')),
+        Center(child: Text('Page1')),
+        Center(child: GenresPage()),
         Center(child: Text('Page3')),
       ],
     );
