@@ -52,12 +52,6 @@ class MainPage extends StatelessWidget {
                 Tab(
                   text: 'Instruments',
                 ),
-                Tab(
-                  text: 'Beat',
-                ),
-                Tab(
-                  text: 'tab5',
-                ),
               ],
             ),
             actions: [
@@ -211,7 +205,7 @@ class TabBarViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TabBarView(
       children: [
-        Center(child: Text('Page1')),
+        Center(child: TrendingPage()),
         Center(child: GenresPage()),
         Center(child: Text('Page3')),
       ],
