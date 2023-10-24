@@ -1,20 +1,11 @@
 const FOOD_DATA = [
   {
-    "name": "Jazz",
+    "name": "Weekly",
   },
   {
-    "name": "Rock",
+    "name": "Monthly",
   },
   {
-    "name": "Pop",
-  },
-  {
-    "name": "R&B",
-  },
-  {
-    "name": "Blues",
-  },
-  {
-    "name": "Rap",
+    "name": "Top 100",
   },
 ];
