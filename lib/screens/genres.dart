@@ -22,7 +22,7 @@ class _GenresPageState extends State<GenresPage> {
             children: <Widget>[
               Container(
                 padding: const EdgeInsets.all(8),
-                child: const Text('Jazz', style: TextStyle(fontSize: 20)),
+                child: Center(child: const Text('Jazz', style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold))),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.redAccent,
@@ -30,7 +30,7 @@ class _GenresPageState extends State<GenresPage> {
               ),
               Container(
                 padding: const EdgeInsets.all(8),
-                child: const Text('Pop-rock', style: TextStyle(fontSize: 20)),
+                child: Center(child: const Text('Pop-rock', style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold))),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.red,
@@ -38,7 +38,7 @@ class _GenresPageState extends State<GenresPage> {
               ),
               Container(
                 padding: const EdgeInsets.all(8),
-                child: const Text('R&B', style: TextStyle(fontSize: 20)),
+                child: Center(child: const Text('R&B', style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold))),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.orange,
@@ -46,7 +46,7 @@ class _GenresPageState extends State<GenresPage> {
               ),
               Container(
                 padding: const EdgeInsets.all(8),
-                child: const Text('Pop', style: TextStyle(fontSize: 20)),
+                child: Center(child: const Text('Pop', style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold))),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.deepOrange,
@@ -54,7 +54,7 @@ class _GenresPageState extends State<GenresPage> {
               ),
               Container(
                 padding: const EdgeInsets.all(8),
-                child: const Text('Blues', style: TextStyle(fontSize: 20)),
+                child: Center(child: const Text('Blues', style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold))),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.yellow,
@@ -62,7 +62,7 @@ class _GenresPageState extends State<GenresPage> {
               ),
               Container(
                 padding: const EdgeInsets.all(8),
-                child: const Text('Electronic', style: TextStyle(fontSize: 20)),
+                child: Center(child: const Text('Electronic', style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold))),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.yellowAccent,
@@ -70,7 +70,7 @@ class _GenresPageState extends State<GenresPage> {
               ),
               Container(
                 padding: const EdgeInsets.all(8),
-                child: const Text('EDM', style: TextStyle(fontSize: 20)),
+                child: Center(child: const Text('EDM', style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold))),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.green,
@@ -78,7 +78,7 @@ class _GenresPageState extends State<GenresPage> {
               ),
               Container(
                 padding: const EdgeInsets.all(8),
-                child: const Text('Rock', style: TextStyle(fontSize: 20)),
+                child: Center(child: const Text('Rock', style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold))),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.greenAccent,
@@ -86,7 +86,7 @@ class _GenresPageState extends State<GenresPage> {
               ),
               Container(
                 padding: const EdgeInsets.all(8),
-                child: const Text('K-Pop', style: TextStyle(fontSize: 20)),
+                child: Center(child: const Text('K-Pop', style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold))),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.blue,
@@ -94,7 +94,7 @@ class _GenresPageState extends State<GenresPage> {
               ),
               Container(
                 padding: const EdgeInsets.all(8),
-                child: const Text('Folk', style: TextStyle(fontSize: 20)),
+                child: Center(child: const Text('Folk', style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold))),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.blueAccent,

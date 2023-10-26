@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:yourchord/screens/profile.dart';
 import 'package:yourchord/screens/search.dart';
 import 'package:yourchord/screens/settings.dart';
-import 'package:yourchord/screens/test4.dart';
 import 'package:yourchord/screens/testtab2.dart';
 import 'package:yourchord/screens/trending.dart';
-
 import 'chord.dart';
 import 'collections.dart';
 import 'genres.dart';
@@ -42,7 +40,7 @@ class MainPage extends StatelessWidget {
             // centerTitle: true,
             // title: Text('YOUR CHORD'),
             toolbarHeight: 35,
-            backgroundColor: Colors.blueGrey,
+            backgroundColor: Colors.lightBlueAccent,
             bottom: TabBar(
               isScrollable: true,
               tabs: [
@@ -93,7 +91,7 @@ class DrawerWidget extends StatelessWidget {
             height: 115,
             child: UserAccountsDrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blueGrey,
+                color: Colors.lightBlueAccent,
               ),
               accountName: Container(
                 // alignment: Alignment.topRight,
@@ -128,7 +126,10 @@ class DrawerWidget extends StatelessWidget {
               visualDensity: VisualDensity(vertical: -3),
               leading: Icon(Icons.home),
               title: const Text('Home'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
+              },
             ),
           ),
           Card(
@@ -136,8 +137,10 @@ class DrawerWidget extends StatelessWidget {
               visualDensity: VisualDensity(vertical: -3),
               leading: Icon(Icons.music_note),
               title: const Text('Chord'),
-              onTap: () {  Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ChordPage()));},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ChordPage()));
+              },
             ),
           ),
           Card(
@@ -145,8 +148,10 @@ class DrawerWidget extends StatelessWidget {
               visualDensity: VisualDensity(vertical: -3),
               leading: Icon(Icons.collections),
               title: const Text('Collections'),
-              onTap: () {   Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => CollectionPage()));},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CollectionPage()));
+              },
             ),
           ),
           Card(
@@ -204,7 +209,7 @@ class TabBarViewWidget extends StatelessWidget {
       children: [
         Center(child: TrendingPage()),
         Center(child: GenresPage()),
-        Center(child: Text('asd')),
+        Center(child: Text('')),
       ],
     );
   }
