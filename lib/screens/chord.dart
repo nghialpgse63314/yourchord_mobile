@@ -17,7 +17,7 @@ class _ChordPagePageState extends State<ChordPage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.lightBlueAccent,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:yourchord/screens/profile.dart';
-import 'package:yourchord/screens/search.dart';
 import 'package:yourchord/screens/settings.dart';
-import 'package:yourchord/screens/testtab2.dart';
 import 'package:yourchord/screens/trending.dart';
 import 'chord.dart';
 import 'collections.dart';
 import 'genres.dart';
+import 'orderhistory.dart';
 
 void main() {
   runApp(const HomePage());
@@ -160,6 +159,17 @@ class DrawerWidget extends StatelessWidget {
               leading: Icon(Icons.record_voice_over),
               title: const Text('Record'),
               onTap: () {},
+            ),
+          ),
+          Card(
+            child: ListTile(
+              visualDensity: VisualDensity(vertical: -3),
+              leading: Icon(Icons.history_rounded),
+              title: const Text('Order history'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => OrderHistoryPage()));
+              },
             ),
           ),
           Card(

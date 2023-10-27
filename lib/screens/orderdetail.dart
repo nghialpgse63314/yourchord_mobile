@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:yourchord/screens/orderdetail.dart';
 import 'package:yourchord/screens/trending.dart';
 
-class OrderHistoryPage extends StatefulWidget {
+class OrderDetailPage extends StatefulWidget {
   @override
-  _OrderHistoryPageState createState() => _OrderHistoryPageState();
+  _OrderDetailPageState createState() => _OrderDetailPageState();
 }
 
-class _OrderHistoryPageState extends State<OrderHistoryPage> {
+class _OrderDetailPageState extends State<OrderDetailPage> {
   bool showPassword = false;
 
   @override
@@ -15,7 +14,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Order history'),
+        title: Text('Order detail'),
         centerTitle: true,
         backgroundColor: Colors.lightBlueAccent,
         leading: IconButton(
@@ -54,28 +53,43 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
           }),
         ],
       ),
-      body: ListView(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(10),
-        children: <Widget>[
-          GestureDetector(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => OrderDetailPage()));
-            },
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black.withAlpha(100), blurRadius: 10.0),
-                ]
-              ),
-              height: 70,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+             Container(
+                  decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                    BoxShadow(
+                        color: Colors.black.withAlpha(100), blurRadius: 10.0),
+                  ]),
+                  height: 70,
+                  padding: const EdgeInsets.all(8),
+                  child: Text('Username'),
+                ),
+            SizedBox(height: 10,),
+            Container(
+              decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                BoxShadow(
+                    color: Colors.black.withAlpha(100), blurRadius: 10.0),
+              ]),
+              height: 330,
               padding: const EdgeInsets.all(8),
               child: Text('Order'),
             ),
-          ),
-        ],
+            SizedBox(height: 10,),
+            Container(
+              decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                BoxShadow(
+                    color: Colors.black.withAlpha(100), blurRadius: 10.0),
+              ]),
+              height: 60,
+              padding: const EdgeInsets.all(8),
+              child: Text('Order Status'),
+            ),
+          ],
+        ),
       ),
     );
   }

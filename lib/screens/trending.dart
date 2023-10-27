@@ -31,8 +31,8 @@ class _TrendingPageState extends State<TrendingPage> {
             padding: const EdgeInsets.all(8),
             child: Center(
                 child: const Text(
-              'First',
-              style: TextStyle(fontSize: 50,color: Colors.white,fontWeight: FontWeight.bold),
+              'Top artists',
+              style: TextStyle(fontSize: 40,color: Colors.white,fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             )),
           ),
@@ -51,7 +51,7 @@ class _TrendingPageState extends State<TrendingPage> {
             child: Center(
                 child: const Text(
               'Top 10',
-              style: TextStyle(fontSize: 50,color: Colors.white,fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 40,color: Colors.white,fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             )),
           ),
@@ -67,7 +67,7 @@ class _TrendingPageState extends State<TrendingPage> {
                       color: Colors.black.withAlpha(100), blurRadius: 10.0),
                 ]),
             padding: const EdgeInsets.all(8),
-            child: Center(child: const Text('Latest', style: TextStyle(fontSize: 50,color: Colors.white,fontWeight: FontWeight.bold))),
+            child: Center(child: const Text('Latest', style: TextStyle(fontSize: 40,color: Colors.white,fontWeight: FontWeight.bold))),
           ),
           Container(
             decoration: BoxDecoration(
@@ -81,7 +81,7 @@ class _TrendingPageState extends State<TrendingPage> {
                       color: Colors.black.withAlpha(100), blurRadius: 10.0),
                 ]),
             padding: const EdgeInsets.all(8),
-            child: Center(child: const Text('Latest', style: TextStyle(fontSize: 50,color: Colors.white,fontWeight: FontWeight.bold))),
+            child: Center(child: const Text('Top US&UK', style: TextStyle(fontSize: 40,color: Colors.white,fontWeight: FontWeight.bold))),
           ),
           Container(
             decoration: BoxDecoration(
@@ -95,7 +95,7 @@ class _TrendingPageState extends State<TrendingPage> {
                       color: Colors.black.withAlpha(100), blurRadius: 10.0),
                 ]),
             padding: const EdgeInsets.all(8),
-            child: Center(child: const Text('Latest', style: TextStyle(fontSize: 50,color: Colors.white,fontWeight: FontWeight.bold))),
+            child: Center(child: const Text('Most viewed', style: TextStyle(fontSize: 40,color: Colors.white,fontWeight: FontWeight.bold))),
           ),
           Container(
             decoration: BoxDecoration(
@@ -109,7 +109,7 @@ class _TrendingPageState extends State<TrendingPage> {
                       color: Colors.black.withAlpha(100), blurRadius: 10.0),
                 ]),
             padding: const EdgeInsets.all(8),
-            child: Center(child: const Text('Latest', style: TextStyle(fontSize: 50,color: Colors.white,fontWeight: FontWeight.bold))),
+            child: Center(child: const Text('Monthly', style: TextStyle(fontSize: 40,color: Colors.white,fontWeight: FontWeight.bold))),
           ),
         ],
       )),

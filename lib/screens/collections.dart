@@ -16,7 +16,7 @@ class _CollectionPagePageState extends State<CollectionPage> {
       appBar: AppBar(
         title: Text("COLLECTIONs"),
         centerTitle: true,
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.lightBlueAccent,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
