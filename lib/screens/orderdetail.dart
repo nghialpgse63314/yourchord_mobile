@@ -11,6 +11,11 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
 
   @override
   Widget build(BuildContext context) {
+
+    TextEditingController quantity = TextEditingController();
+    TextEditingController orderid = TextEditingController();
+    TextEditingController beatid = TextEditingController();
+    TextEditingController description = TextEditingController();
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -59,35 +64,108 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-             Container(
-                  decoration: BoxDecoration(color: Colors.white, boxShadow: [
-                    BoxShadow(
-                        color: Colors.black.withAlpha(100), blurRadius: 10.0),
-                  ]),
-                  height: 70,
-                  padding: const EdgeInsets.all(8),
-                  child: Text('Username'),
+            // Container(
+            //   decoration: BoxDecoration(color: Colors.white, boxShadow: [
+            //     BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+            //   ]),
+            //   height: 70,
+            //   padding: const EdgeInsets.all(8),
+            //   child: Text('Username'),
+            // ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+              ]),
+              height: 160,
+              padding: const EdgeInsets.all(8),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text('OrderID',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold)),
+                      Spacer(),
+                      Flexible(
+                        child: TextField(
+                          controller: orderid,
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+                            // border: OutlineInputBorder(),
+                          ),
+                          style: TextStyle(
+                              fontSize: 15.0, height: 2.0, color: Colors.black),
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text('BeatID',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold)),
+                      Spacer(),
+                      Flexible(
+                        child: TextField(
+                          controller: beatid,
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+                            // border: OutlineInputBorder(),
+                          ),
+                          style: TextStyle(
+                              fontSize: 15.0, height: 2.0, color: Colors.black),
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text('Quantity',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold)),
+                      Spacer(),
+                      Flexible(
+                        child: TextField(
+                          controller: quantity,
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.symmetric(vertical: 5.0),
+                            // border: OutlineInputBorder(),
+                          ),
+                          style: TextStyle(
+                              fontSize: 15.0, height: 2.0, color: Colors.black),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                BoxShadow(
+                    color: Colors.black.withAlpha(100), blurRadius: 10.0),
+              ]),
+              padding: new EdgeInsets.all(7.0),
+              child: new SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                reverse: true,
+                child: new TextField(
+                  controller: description,
+                  keyboardType: TextInputType.multiline,
+                  maxLines: null, //grow automatically
+                  decoration: new InputDecoration.collapsed(
+                    hintText: 'Description',
+                  ),
                 ),
-            SizedBox(height: 10,),
-            Container(
-              decoration: BoxDecoration(color: Colors.white, boxShadow: [
-                BoxShadow(
-                    color: Colors.black.withAlpha(100), blurRadius: 10.0),
-              ]),
-              height: 330,
-              padding: const EdgeInsets.all(8),
-              child: Text('Order'),
-            ),
-            SizedBox(height: 10,),
-            Container(
-              decoration: BoxDecoration(color: Colors.white, boxShadow: [
-                BoxShadow(
-                    color: Colors.black.withAlpha(100), blurRadius: 10.0),
-              ]),
-              height: 60,
-              padding: const EdgeInsets.all(8),
-              child: Text('Order Status'),
-            ),
+              )
+              ,
+            )
           ],
         ),
       ),
