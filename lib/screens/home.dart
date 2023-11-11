@@ -5,6 +5,7 @@ import 'package:yourchord/screens/trending.dart';
 import 'chord.dart';
 import 'collections.dart';
 import 'genres.dart';
+import 'instruments.dart';
 import 'orderhistory.dart';
 
 void main() {
@@ -33,7 +34,7 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 5,
+      length: 3,
       child: Scaffold(
           appBar: AppBar(
             // centerTitle: true,
@@ -219,7 +220,7 @@ class TabBarViewWidget extends StatelessWidget {
       children: [
         Center(child: TrendingPage()),
         Center(child: GenresPage()),
-        Center(child: Text('')),
+        Center(child: InstrumentPage()),
       ],
     );
   }
